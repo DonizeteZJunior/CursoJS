@@ -4,7 +4,7 @@ dotenv.config();
 
 import './src/database';
 import express from 'express';
-import homeRoutes from './src/routes/home';
+import userRoutes from './src/routes/userRoutes';
 
 class App {
   // Executa tudo no constructor sempre que uma nova instância é criada
@@ -20,7 +20,7 @@ class App {
   }
 
   routes(){
-    this.app.use('/', homeRoutes);
+    this.app.use('/users', userRoutes);
   }
 }
 
